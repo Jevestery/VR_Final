@@ -5,7 +5,7 @@ var buttonText = document.getElementById('buttonText');
 var blackout = document.getElementById('blackout');
 var base = document.getElementById('base');
 var pillars = document.getElementsByClassName('pillar');
-var video = document.getElementById('videosphere')
+var videosphere = document.getElementById('videosphere')
 
 var step = 1;
 
@@ -13,7 +13,6 @@ var step = 1;
 button.addEventListener('click', function(){
 
   if (step == 1) {
-    // button.object3D.position.y = 1.35;
     text.setAttribute('text', 'value: My name is Jeve. I prepared something. Just... for you.');
     overlay.setAttribute('animation', 'property: position');
     button.setAttribute('animation', 'property: position');
@@ -94,14 +93,14 @@ button.addEventListener('click', function(){
       button.setAttribute('visible', false);
       buttonText.setAttribute('visible', false);
       base.setAttribute('visible', false);
-      for (var i = 0; i < pillar.length; i++) {
-        pillar[i].setAttribute('visible', false);
+      for (var i = 0; i < pillars.length; i++) {
+        pillars[i].setAttribute('visible', false);
       }
     }, 1500);
     setTimeout(function(){
       blackout.setAttribute('visible', false);
-      video.style.display('block');
-    }, 1000);
+      videosphere.setAttribute('visible', true);
+    }, 3000);
 
     step++;
   }
