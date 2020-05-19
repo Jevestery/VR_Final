@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="scripts/arrow-key-rotation.js"></script>
+  </head>
+  <body>
+
+
+
+
+    <a-scene
+     background="color: #333333">
+
+
+     <a-plane id="ground"
+       position="0 0 -4"
+       rotation="-90 0 0"
+       width="100"
+       height="100"
+       color="#7BC8A4"
+       shadow>
+     </a-plane>
+
+
+
+
+
+
+
+
+      <a-camera
+        user-height="0"
+        wasd-controls-enabled="false"
+        arrow-key-rotation
+        >
+
+        <!-- <a-entity id="msg"
+          position="0 -0.3 -1.5"
+          text="align: center;
+                width: 5;
+                wrapCount: 100;
+                color: blue;
+                value: Click to start the music rumble"
+                hide-once-playing="#video">
+        </a-entity> -->
+
+        <a-ring
+          position="0 0 -1"
+          radius-inner= "0.001"
+          radius-outer= "0.015"
+          material="color: black; shader: flat">
+        </a-ring>
+        <a-ring id="cursor"
+          position="0 0 -1"
+          radius-inner= "0.005"
+          radius-outer= "0.01"
+          material="color: white; shader: flat">
+        </a-ring>
+
+      </a-camera>
+
+
+      <a-assets>
+        <!-- <video
+          id="video"
+          style="display:none"
+          autoplay
+          loop
+          crossorigin="anonymous"
+          playsinline
+          webkit-playsinline>
+
+          <source type="video/mp4"
+               src="video/bg.mp4" />
+
+        </video> -->
+      </a-assets>
+
+
+    </a-scene>
+
+
+
+  </body>
+</html>
