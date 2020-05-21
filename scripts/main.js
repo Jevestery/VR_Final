@@ -1,16 +1,73 @@
-var button = document.getElementById('button');
+var scene = document.querySelector("a-scene");
+
 var overlay = document.getElementById('overlayText');
+var introText = document.getElementById('introText');
+var introButtonText = document.getElementById('introButtonText');
+var introButton = document.getElementById('introButton');
+
+var button = document.getElementById('button1');
+var button2 = document.getElementById('button2');
 var text = document.getElementById('mainText');
 var buttonText = document.getElementById('buttonText');
+
 var blackout = document.getElementById('blackout');
+
 var base = document.getElementById('base');
 var pillars = document.getElementsByClassName('pillar');
-var videosphere = document.getElementById('videosphere')
+var videosphere = document.getElementById('videosphere');
+var vid = document.getElementById('video')
 
-var step = 1;
+var step = 0;
+
+
+
+introButton.addEventListener('click', function(){
+
+  blackout.setAttribute('animation', 'property: opacity');
+  overlay.setAttribute('visible', false);
+  introText.setAttribute('visible', false);
+  introButtonText.setAttribute('visible', false);
+  introButton.setAttribute('animation', 'property: opacity');
+
+
+  setTimeout(function(){
+    button.setAttribute('animation__2', 'property: opacity');
+    button2.setAttribute('animation__2', 'property: opacity');
+    setTimeout(function(){
+        buttonText.setAttribute('visible', true);
+    }, 1000);
+  }, 2500);
+
+
+
+
+
+  step++;
+});
+
+
+function playVideo () {
+  vid.play();
+  videosphere.components.material.material.map.image.play();
+}
+
+
+
+
+
+
+
+
 
 
 button.addEventListener('click', function(){
+
+  playVideo();
+
+
+
+
+
 
   if (step == 1) {
     text.setAttribute('text', 'value: My name is Jeve. I prepared something. Just... for you.');
@@ -87,7 +144,8 @@ button.addEventListener('click', function(){
 
     step++;
   } else if (step == 7) {
-    blackout.setAttribute('animation', 'property: position')
+    blackout.object3D.position.x = 2;
+    blackout.setAttribute('animation', 'property: opacity')
     text.setAttribute('visible', false);
     setTimeout(function(){
       button.setAttribute('visible', false);

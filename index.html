@@ -72,30 +72,27 @@
         <!-- OVERLAY TEXT -->
 
         <a-entity id="overlayText"
-          position="0 -1 -1.5"
+          position="0 -1 -1.3"
           text="align: center;
                 width: 3;
                 wrapCount: 100;
                 color: white;
-                value: You can click on buttons by looking at them for 2 seconds"
-          animation="property: none;
-                     to: 0 0 1;
-                     dur: 2000;
-                     easing: linear;
-                     loop: false">
+                value: You can click on buttons by looking at them for 2 seconds">
         </a-entity>
 
         <!-- OVERLAY PlANE -->
 
         <a-box id="blackout"
-          position="10 -1 -1.5"
+          position="2 -1 -1.5"
           width="10"
           height="10"
           depth="0.2"
           color="black"
+          opacity=1
           animation="property: none;
-                     to: 2 -1 -1.5;
-                     dur: 1500;
+                     from: 1;
+                     to: 0;
+                     dur: 3000;
                      easing: easeInOutSine;
                      loop: false">
         </a-box>
@@ -335,30 +332,95 @@
 
 
 
-      <!-- TEXT -->
+      <!-- INTRO -->
 
 
-      <a-entity id="mainText"
+      <a-entity id="introText"
         position="0 1.7 -0.8"
         text="align: center;
               width: 3;
               wrapCount: 100;
               color: white;
-              value: Welcome. I already expected you here.">
+              value: This experience features 3D audio.
+                     Please make sure to wear headphones.">
       </a-entity>
 
-
-      <a-box  id="button"
-        position="0 2 -0.8"
+      <a-box  id="introButton"
+        position="0 1.35 -0.8"
         height="0.15"
         width="0.3"
         depth="0.1"
         color="white"
         animation="property: none;
-                   to: 0 1.35 -0.8;
-                   dur: 1000;
-                   easing: easeInOutExpo;
+                   from: 1;
+                   to: 0;
+                   dur: 2000;
+                   easing: easeInOutSine;
                    loop: false">
+      </a-box>
+
+      <a-entity id="introButtonText"
+        position="0 1.35 -0.75"
+        text="align: center;
+              width: 3;
+              wrapCount: 100;
+              color: black;
+              value: Okay">
+      </a-entity>
+
+
+
+      <!-- MAIN TEXT -->
+
+
+      <a-entity id="mainText"
+        position="0 1.7 -0.8"
+        visible="false"
+        text="align: center;
+              width: 3;
+              wrapCount: 100;
+              color: white;
+              value: This experience features 3D audio.
+                     Please make sure to wear headphones.">
+      </a-entity>
+
+
+      <a-box  id="button1"
+        position="0.2 1.6 -0.8"
+        height="0.15"
+        width="0.3"
+        depth="0.1"
+        color="white"
+        opacity="0"
+        animation__1="property: none;
+                      to: 0 1.35 -0.8;
+                      dur: 1000;
+                      easing: easeInOutExpo;
+                      loop: false"
+        animation__2="property: none;
+                      to: 1;
+                      dur: 2000;
+                      easing: easeInOutExpo;
+                      loop: false">
+      </a-box>
+
+      <a-box  id="button2"
+        position="-0.2 1.6 -0.8"
+        height="0.15"
+        width="0.3"
+        depth="0.1"
+        color="white"
+        opacity="0"
+        animation__1="property: none;
+                      to: 0 1.35 -0.8;
+                      dur: 1000;
+                      easing: easeInOutExpo;
+                      loop: false"
+        animation__2="property: none;
+                      to: 1;
+                      dur: 2000;
+                      easing: easeInOutExpo;
+                      loop: false">
       </a-box>
 
 
@@ -369,6 +431,7 @@
               wrapCount: 100;
               color: black;
               value: Okay"
+        visible="false"
         animation="property: none;
                    to: 0 1.35 -0.75;
                    dur: 1000;
