@@ -276,9 +276,13 @@ function step6() {
   }, 1500);
 
   setTimeout(function(){
-    blackout.setAttribute('animation', 'from: 1;')
     blackout.setAttribute('animation', 'to: 0;')
-    blackout.setAttribute('visible', false);
+    blackout.setAttribute('animation', 'from: 1;')
     videosphere.setAttribute('visible', true);
   }, 3000);
+
+  setTimeout(function() {
+    blackout.setAttribute('visible', false);
+  }, 5000);
+
 }
