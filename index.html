@@ -16,8 +16,7 @@
 
       <a-assets>
 
-        <video
-          id="video"
+        <video id="video"
           autoplay
           loop
           crossorigin="anonymous"
@@ -28,6 +27,44 @@
                src="video/bg1.mp4" />
 
         </video>
+
+
+
+        <audio id="i_am_glad"
+          src="sounds/i_am_glad.wav"
+          preload="auto">
+        </audio>
+
+        <audio id="i_forgot"
+          src="sounds/i_forgot.wav"
+          preload="auto">
+        </audio>
+
+        <audio id="i_know_how"
+          src="sounds/i_know_how.wav"
+          preload="auto">
+        </audio>
+
+        <audio id="not_quite"
+          src="sounds/not_quite.wav"
+          preload="auto">
+        </audio>
+
+        <audio id="take_a_look"
+          src="sounds/take_a_look.wav"
+          preload="auto">
+        </audio>
+
+        <audio id="turn_around"
+          src="sounds/turn_around.wav"
+          preload="auto">
+        </audio>
+
+        <audio id="welcome"
+          src="sounds/welcome.wav"
+          preload="auto">
+        </audio>
+
 
       </a-assets>
 
@@ -473,6 +510,18 @@
                    dur: 1000;
                    easing: easeInOutExpo;
                    loop: false">
+      </a-entity>
+
+
+
+      <!-- VOICE -->
+
+
+      <a-entity id="voice"
+        position="0 1.7 -0.4"
+        sound="src: none;
+               autoplay: true;
+               loop: false;">
       </a-entity>
 
 

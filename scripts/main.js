@@ -11,6 +11,7 @@ var text = document.getElementById('mainText');
 var text2 = document.getElementById('mainText2');
 var buttonText = document.getElementById('buttonText');
 var buttonText2 = document.getElementById('button2Text');
+var voice = document.getElementById('voice');
 
 var blackout = document.getElementById('blackout');
 
@@ -67,6 +68,7 @@ button.addEventListener('click', function(){
 
   if (step == 1) {
 
+    voice.setAttribute('sound', 'src: #i_am_glad;');
     text.setAttribute('text', 'value: Oh, I am glad you noticed the music!');
     text2.setAttribute('text', 'value: I created it just for this place!');
     step1(button, buttonText, button2, buttonText2);
@@ -84,6 +86,7 @@ button.addEventListener('click', function(){
 
   } else if (step == 4) {
 
+    voice.setAttribute('sound', 'src: #i_know_how;');
     text.setAttribute('text', 'value: Hmm, I know how I could fix that.');
     text2.setAttribute('text', 'value: You know, I have been working on something... something amazing!');
 
@@ -110,8 +113,9 @@ button2.addEventListener('click', function(){
 
   if (step == 1) {
 
+    voice.setAttribute('sound', 'src: #welcome;');
     text.setAttribute('text', 'value: Oh, welcome! I did not expect guests just yet...');
-    text2.setAttribute('text', 'value: This my my virtual music realm - a new way of experiencing music.');
+    text2.setAttribute('text', 'value: This is my virtual music realm - a new way of experiencing music.');
     step1(button2, buttonText2, button, buttonText);
     step++;
 
@@ -127,8 +131,9 @@ button2.addEventListener('click', function(){
 
   } else if (step == 4) {
 
+    voice.setAttribute('sound', 'src: #i_forgot;');
     text.setAttribute('text', 'value: Oh, I forgot to mention that!');
-    text.setAttribute('text', 'value: This, my friend, is my virtual reality audio visualizer!');
+    text2.setAttribute('text', 'value: This, my friend, is my virtual reality audio visualizer!');
 
     step4(button2, buttonText2, button, buttonText);
     step++;
@@ -166,6 +171,7 @@ function step1(btn, btnTxt, otherBtn, otherBtnTxt) {
 
 
 function step2(btn, btnTxt, otherBtn, otherBtnTxt) {
+  voice.setAttribute('sound', 'src: #not_quite');
   text.setAttribute('text', 'value: Not quite. See, these days, it is difficult to visit real concerts.');
   text2.setAttribute('text', 'value: So I came up with an alternative! Can you hear the music moving around you?');
   btn.setAttribute('animation__1', 'to: -0.4 2 -0.8;');
@@ -189,6 +195,7 @@ function step2(btn, btnTxt, otherBtn, otherBtnTxt) {
 
 
 function step3() {
+  voice.setAttribute('sound', 'src: #take_a_look;');
   text.setAttribute('text', 'value: Ohh, take a look around!');
   text2.setAttribute('text', 'value: What do you think?');
 
@@ -241,6 +248,7 @@ function step4(btn, btnTxt, otherBtn, otherBtnTxt) {
 
 function step5(btn, btnTxt, otherBtn, otherBtnTxt) {
   text2.setAttribute('visible', false);
+  voice.setAttribute('sound', 'src: #turn_around;');
   text.setAttribute('text', 'value: Just turn around and give me one second!');
 
   btn.setAttribute('animation__1', 'property: position');
