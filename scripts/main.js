@@ -161,11 +161,13 @@ function step1(btn, btnTxt, otherBtn, otherBtnTxt) {
   btnTxt.setAttribute('animation', 'property: position;');
   otherBtn.setAttribute('animation__2', 'to: 0;');
 
+
   setTimeout(function(){
     text.setAttribute('visible', true);
     text2.setAttribute('visible', true);
     otherBtnTxt.setAttribute('visible', false);
     btnTxt.setAttribute('text', 'value: So... this is a virtual concert hall?');
+    otherBtn.object3D.position.x = 20;
   }, 500);
 }
 
@@ -236,6 +238,7 @@ function step4(btn, btnTxt, otherBtn, otherBtnTxt) {
 
   setTimeout(function(){
     otherBtnTxt.setAttribute('visible', false);
+    otherBtn.object3D.position.x = 20;
     if (btn == document.getElementById('button1')) {
       btnTxt.setAttribute('text', 'value: Oh, wow, please show me!');
     } else {
